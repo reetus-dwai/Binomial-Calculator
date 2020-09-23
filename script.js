@@ -16,4 +16,4 @@ function factorial(n) {
 function calc() {
 	let exponent = document.getElementById('exponent').value;
   let expression = document.getElementById('expression').value;
-  document.getElementById('ans').innerHTML = 'You answer is: ' + expression;}
+  document.getElementById('ans').innerHTML = h + '・'}
