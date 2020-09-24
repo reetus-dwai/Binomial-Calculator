@@ -1,22 +1,37 @@
-let row = 30;
+let row = 3;
 
 function tri(row, column) {
   let x;
-	x = Math.round((factorial(row) / (factorial(row - column) * factorial(column))));
+  x = Math.round((factorial(row) / (factorial(row - column) * factorial(column))));
   return x;
 }
+
 let h = [];
-for (let i=0; i<row+1; i++){
-	h.push(tri(row, i));
-	document.getElementById('ans').innerHTML = h;
+
+for (let i = 0; i < row + 1; i++) {
+  h.push(tri(row, i));
 }
+
 function factorial(n) {
   return n ? n * factorial(n - 1) : 1;
 }
+
+let p = [];
+
+
+
 function calc() {
-	let exponent = document.getElementById('exponent').value;
-  let expression = document.getElementById('expression').value;
-  document.getElementById('ans').innerHTML = h[0]}
+  for (let i = 0; i < h.length; i++) {
+    let exponent = document.getElementById('exponent').value;
+    let expression1 = document.getElementById('expression1').value;
+    let expression2 = document.getElementById('expression2').value;
 
-
- /*・*/
+    if (i + 1 < h.length) {
+      p.push(h[i] + '・' + '(' + expression1 + ')' + (exponent - i).toString().sup() + '・ (' + expression2.toString() + ')' + i.toString().sup() + ' + ');
+    } else {
+      p.push(h[i] + '・' + '(' + expression1 + ')' + (exponent - i).toString().sup() + '・ (' + expression2.toString() + ')' + i.toString().sup());
+    }
+  }
+  document.getElementById('ans').innerHTML = p.toString();
+}
+/*・*/
