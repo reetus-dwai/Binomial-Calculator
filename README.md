@@ -1,2 +1,2 @@
-# Pascal-Triangle
-Find any row in the Pascal triangle
+# binomial expander
+expand binomials
