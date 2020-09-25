@@ -17,6 +17,7 @@ function factorial(n) {
 }
 
 let p = [];
+let p2 = [];
 
 
 
@@ -42,10 +43,10 @@ function calc2() {
     let expression2 = document.getElementById('expression2').value;
 
     if (i + 1 < h.length) {
-      p.push(h[i] * Math.pow(expression2, i) + '' + expression1.toString() + (exponent - i).toString().sup() + '+');
+      p2.push(h[i] * Math.pow(expression2, i) + '' + expression1.toString() + (exponent - i).toString().sup() + '+');
     }else {
-			p.push(h[i] * Math.pow(expression2, i) + '' + expression1.toString() + (exponent - i).toString().sup());
+			p2.push(h[i] * Math.pow(expression2, i) + '' + expression1.toString() + (exponent - i).toString().sup());
 		}
   }
-  document.getElementById('calculated').innerHTML = p.join().replace(',', '');
+  document.getElementById('calculated').innerHTML = p2.join().replace(',', '');
 }
