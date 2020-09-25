@@ -32,7 +32,7 @@ function calc() {
       p.push(h[i] + '・' + '(' + expression1 + ')' + (exponent - i).toString().sup() + '・ (' + expression2.toString() + ')' + i.toString().sup());
     }
   }
-  document.getElementById('ans').innerHTML = p.join().replace(',','');
+  document.getElementById('ans').innerHTML = p.join().replace(',', '');
 }
 
 function calc2() {
@@ -42,11 +42,10 @@ function calc2() {
     let expression2 = document.getElementById('expression2').value;
 
     if (i + 1 < h.length) {
-      p.push(h[i] * (expression2 ** (exponent-1)));
-    } else {
-      p.push(h[i] + '・' + '(' + expression1 + ')' + (exponent - i).toString().sup() + '・ (' + expression2.toString() + ')' + i.toString().sup());
-    }
+      p.push(h[i] * Math.pow(expression2, i) + '' + expression1.toString() + (exponent - i).toString().sup() + '+');
+    }else {
+			p.push(h[i] * Math.pow(expression2, i) + '' + expression1.toString() + (exponent - i).toString().sup());
+		}
   }
-  document.getElementById('ans').innerHTML = p.toString();
+  document.getElementById('calculated').innerHTML = p.join().replace(',', '');
 }
-/*・*/
