@@ -32,6 +32,21 @@ function calc() {
       p.push(h[i] + '・' + '(' + expression1 + ')' + (exponent - i).toString().sup() + '・ (' + expression2.toString() + ')' + i.toString().sup());
     }
   }
+  document.getElementById('ans').innerHTML = p.join().replace(',','');
+}
+
+function calc2() {
+  for (let i = 0; i < h.length; i++) {
+    let exponent = document.getElementById('exponent').value;
+    let expression1 = document.getElementById('expression1').value;
+    let expression2 = document.getElementById('expression2').value;
+
+    if (i + 1 < h.length) {
+      p.push(h[i] * (expression2 ** (exponent-1)));
+    } else {
+      p.push(h[i] + '・' + '(' + expression1 + ')' + (exponent - i).toString().sup() + '・ (' + expression2.toString() + ')' + i.toString().sup());
+    }
+  }
   document.getElementById('ans').innerHTML = p.toString();
 }
 /*・*/
