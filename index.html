@@ -4,29 +4,29 @@
   
   <!--  Meta  -->
   <meta charset="UTF-8" />
-  <title>Binomial Expander</title>
+  <title>My New Pen!</title>
   
   <!--  Styles  -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   
-	<p>	Put the exponent here →</p>
+	<p>	Put the exponent here ↓</p>
 	<input type="text" id='exponent' placeholder='exponent'>
 	<br><br>
-	<p>Put the x here →</p>
+	<p>Put the x here ↓</p>
 	<input type="text" id='expression1' placeholder='ex: x'>
 	<br><br>
-	<p>Put the rest here →</p>
+	<p>Put the rest here ↓</p>
 	<input type="text" id='expression2' placeholder='ex: 5'>
 	<br><br>
-	<button onclick="calc()" id="submit">Calculate</button>
+	<button onclick="calc()" id="calc1">Calculate Partially</button>
 	<br><br>
-	<button onclick="calc2()" id="submit">Calculate 2</button>
+	<button onclick="calc2()" id="calc2">Calculate Fully</button>
 	<br><br>
 	<p id='ans'></p>
 	<br><br>
 	<p id='calculated'></p>
-	<script src='script.js'></script>
+	<button id='reset' onclick='reset()'>Reset</button>
 </body>
 </html>
