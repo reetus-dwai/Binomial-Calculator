@@ -48,8 +48,8 @@ function calc2() {
 }
 
 function reset(){
-	p = [];
-	p2 = [];
-	document.getElementById('ans').innerHTML = '';
-	document.getElementById('calculated').innerHTML = '';
+  p = [];
+  p2 = [];
+  document.getElementById('ans').innerHTML = '';
+  document.getElementById('calculated').innerHTML = '';
 }
