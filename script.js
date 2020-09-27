@@ -1,12 +1,13 @@
 let row = 3;
+let h = [];
+let p = [];
+let p2 = [];
 
 function tri(row, column) {
   let x;
   x = Math.round((factorial(row) / (factorial(row - column) * factorial(column))));
   return x;
 }
-
-let h = [];
 
 for (let i = 0; i < row + 1; i++) {
   h.push(tri(row, i));
@@ -15,11 +16,6 @@ for (let i = 0; i < row + 1; i++) {
 function factorial(n) {
   return n ? n * factorial(n - 1) : 1;
 }
-
-let p = [];
-let p2 = [];
-
-
 
 function calc() {
   for (let i = 0; i < h.length; i++) {
@@ -44,9 +40,9 @@ function calc2() {
 
     if (i + 1 < h.length) {
       p2.push(h[i] * Math.pow(expression2, i) + (expression1.toString() + (exponent - i).toString().sup() + ' + '));
-    }else {
-			p2.push(h[i] * Math.pow(expression2, i) +  Math.pow(expression1, (exponent - i))-1);
-		}
+    } else {
+      p2.push(h[i] * Math.pow(expression2, i) + Math.pow(expression1, (exponent - i)) - 1);
+    }
   }
   document.getElementById('calculated').innerHTML = p2.join().replace(',', '');
 }
