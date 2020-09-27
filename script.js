@@ -44,5 +44,12 @@ function calc2() {
       p2.push(h[i] * Math.pow(expression2, i) + Math.pow(expression1, (exponent - i)) - 1);
     }
   }
-  document.getElementById('calculated').innerHTML = p2.join().replace(',', '');
+  document.getElementById('calculated').innerHTML = p2.toString().replace(',', '');
+}
+
+function reset(){
+	p = [];
+	p2 = [];
+	document.getElementById('ans').innerHTML = '';
+	document.getElementById('calculated').innerHTML = '';
 }
