@@ -42,11 +42,11 @@ function calc2() {
     let expression1 = document.getElementById('expression1').value;
     let expression2 = document.getElementById('expression2').value;
 
-    if (i + 1 < h.length) {
-      p2.push(h[i] * Math.pow(expression2, i) + '' + expression1.toString() + (exponent - i).toString().sup() + '+');
-    }else {
-			p2.push(h[i] * Math.pow(expression2, i) + '' + expression1.toString() + (exponent - i).toString().sup());
-		}
+  if (i + 1 < h.length) {
+    p2.push(h[i] * Math.pow(expression2, i) + ' ' + expression1.toString() + (exponent - i).toString().sup() + '+');
+  }else {
+    p2.push(h[i] * Math.pow(expression2, i) + ' ' + expression1.toString() + (exponent - i).toString().sup());
+    }
   }
   document.getElementById('calculated').innerHTML = p2.join().replace(',', '');
 }
