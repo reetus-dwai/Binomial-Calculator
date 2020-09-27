@@ -2,3 +2,16 @@
 	background: lightgray;
 	border-radius: 4px;
 }
+
+button {
+	background: blue;
+	color: whitesmoke;
+	border: none;
+	border-radius: 5px;
+}
+
+#reset {
+	position: absolute;
+	left: 250px;
+	top: 20px;
+}
